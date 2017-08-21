@@ -26,7 +26,7 @@ class Book extends React.Component {
   }
 
   handleOpenBook() {
-    localStorage.setItem('reading', this.props.book.key);
+    this.props.handleReadingBook(this.props.book);
     this.props.handleReading(true);
   }
 

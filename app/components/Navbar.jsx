@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles, createStyleSheet} from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
@@ -9,7 +9,7 @@ import Typography from 'material-ui/Typography';
 import AddIcon from 'material-ui-icons/Add';
 import Book from '../service/Book';
 
-const styleSheet = createStyleSheet({
+const styles = {
   navbar: {
     backgroundColor: '#FFFFFF',
     boxShadow: '0 1px 1px rgba(0, 0, 0, .15)',
@@ -22,7 +22,7 @@ const styleSheet = createStyleSheet({
     paddingTop: 6,
     paddingBottom: 6,
   }
-});
+};
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -95,4 +95,4 @@ Navbar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styleSheet)(Navbar);
+export default withStyles(styles)(Navbar);

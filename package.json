@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "babel-runtime": "6.x",
-    "material-ui": "^1.0.0-beta.4",
+    "material-ui": "^1.0.0-beta.5",
     "material-ui-icons": "^1.0.0-alpha.19",
     "react": "15.x",
     "react-dom": "15.x",

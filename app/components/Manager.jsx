@@ -7,7 +7,11 @@ import DBUtil from '../service/DBUtil';
 class Manager extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {books: [], openEditDialog: false, targetBook: {}};
+    this.state = {
+      books: [], // 书籍列表
+      openEditDialog: false, // 是否打开编辑书籍信息的对话框
+      targetBook: {} // 正在被编辑的书籍对象
+    };
     this.handleAddBook = this.handleAddBook.bind(this);
     this.handleDeleteBook = this.handleDeleteBook.bind(this);
     this.handleEditBook = this.handleEditBook.bind(this);
@@ -83,7 +87,7 @@ class Manager extends React.Component {
     return (
       <div id="manager">
         <Navbar handleAddBook={this.handleAddBook}/>
-        <BookList books={this.state.books} handleDelete={this.handleDeleteBook} handleEdit={this.handleEditBook} handleReading={this.props.handleReading}/>
+        <BookList books={this.state.books} handleDelete={this.handleDeleteBook} handleEdit={this.handleEditBook} handleReading={this.props.handleReading} handleReadingBook={this.props.handleReadingBook}/>
         <EditBookDialog open={this.state.openEditDialog} book={this.state.targetBook} handleUpdateBook={this.handleUpdateBook} handleCloseEditDialog={this.handleCloseEditDialog}/>
       </div>
     );
