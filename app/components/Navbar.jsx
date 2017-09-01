@@ -64,7 +64,7 @@ class Navbar extends React.Component {
                   <Grid container justify="flex-start" align="center">
                     <Grid item>
                       <Typography type="title" className={classes.logo}>
-                        Qiu React
+                        Qiu Plus
                       </Typography>
                     </Grid>
                   </Grid>
