@@ -82,6 +82,7 @@ class Navigation extends React.Component {
       if (target.nodeName.toLowerCase() !== 'a') return;
       let href = target.getAttribute('href');
       this.props.epub.goto(href);
+      console.log('navigation render: ', this.props.epub.isRendered);
       event.preventDefault();
     });
   }
@@ -97,7 +98,10 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const classes = this.props.classes;
+    const { theme, classes } = this.props;
+    let fontColor = {
+      color: theme ? '#000000de' : '#fff',
+    };
 
     return (
       <div id="navigation">
@@ -114,7 +118,7 @@ class Navigation extends React.Component {
               Table Of Contents
             </Typography>
           </div>
-          <div id="toc" className={classes.list}>
+          <div id="toc" className={classes.list} style={fontColor}>
           </div>
         </Drawer>
       </div>

@@ -1,19 +1,18 @@
 import React from 'react';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
-import createPalette from 'material-ui/styles/palette';
 import purple from 'material-ui/colors/purple';
 import green from 'material-ui/colors/green';
 import red from 'material-ui/colors/red';
 
 const theme = createMuiTheme({
-  palette: createPalette({
+  palette: {
     primary: purple, // Purple and green play nicely together.
-    accent: {
+    secondary: {
       ...green,
       A400: '#00e677',
     },
     error: red,
-  }),
+  },
 });
 
 class Palette extends React.Component {

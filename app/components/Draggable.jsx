@@ -5,6 +5,7 @@ class Draggable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // TODO 修改为更为通用的形式
       x: this.props.left ? this.props.left : 0, // 可拖动元素的 left 属性的值
       y: this.props.top ? this.props.top : 0, // 可拖动元素的 top 属性的值
     };

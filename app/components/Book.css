@@ -33,7 +33,6 @@
 
   width: 190px;
   height: 110px;
-  background-color: #FFF;
 }
 
 .cover-border {
@@ -113,10 +112,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-#delete-book, #edit-book {
-  width: 30px;
-  height: 30px;
-  color: #f0f0f0;
 }

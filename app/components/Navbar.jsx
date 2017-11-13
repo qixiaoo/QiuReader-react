@@ -7,11 +7,11 @@ import Toolbar from 'material-ui/Toolbar';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import AddIcon from 'material-ui-icons/Add';
-import Book from '../service/Book';
+import Book from '../model/Book';
 
-const styles = {
+const styles = theme => ({
   navbar: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: theme.palette.background.paper,
     boxShadow: '0 1px 1px rgba(0, 0, 0, .15)',
   },
   logo: {
@@ -22,7 +22,7 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 6,
   }
-};
+});
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -47,7 +47,7 @@ class Navbar extends React.Component {
     };
 
     reader.onerror = () => {
-      alert('Σ(っ °Д °;)っ Some error occured, please try again!');
+      alert('Σ(っ °Д °;)っ Some error occurred, please try again!');
     };
   }
 

@@ -7,7 +7,6 @@ import Dialog, {
   DialogContent,
   DialogActions,
 } from 'material-ui/Dialog';
-import Palette from './Palette';
 
 class EditBookDialog extends React.Component {
   constructor(props) {
@@ -26,41 +25,39 @@ class EditBookDialog extends React.Component {
 
   render() {
     return (
-      <Palette>
-        <Dialog open={this.props.open}>
-          <DialogTitle>Edit information</DialogTitle>
-          <DialogContent>
-            <Grid container justify="center">
-              <Grid item xs={8}>
-                <TextField
-                  id="title"
-                  label="Title"
-                  defaultValue={this.props.book.name}
-                  fullWidth
-                  margin="normal"
-                />
-              </Grid>
-              <Grid item xs={8}>
-                <TextField
-                  id="author"
-                  label="Author"
-                  defaultValue={this.props.book.author}
-                  fullWidth
-                  margin="normal"
-                />
-              </Grid>
+      <Dialog open={this.props.open}>
+        <DialogTitle>Edit information</DialogTitle>
+        <DialogContent>
+          <Grid container justify="center">
+            <Grid item xs={8}>
+              <TextField
+                id="title"
+                label="Title"
+                defaultValue={this.props.book.name}
+                fullWidth
+                margin="normal"
+              />
             </Grid>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleSaveBook} color="primary">
-              Save
-            </Button>
-            <Button onClick={() => this.props.handleCloseEditDialog()} color="accent">
-              Cancel
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </Palette>
+            <Grid item xs={8}>
+              <TextField
+                id="author"
+                label="Author"
+                defaultValue={this.props.book.author}
+                fullWidth
+                margin="normal"
+              />
+            </Grid>
+          </Grid>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleSaveBook} color="primary">
+            Save
+          </Button>
+          <Button onClick={() => this.props.handleCloseEditDialog()} color="accent">
+            Cancel
+          </Button>
+        </DialogActions>
+      </Dialog>
     );
   }
 }
