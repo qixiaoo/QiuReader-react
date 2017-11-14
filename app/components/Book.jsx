@@ -91,7 +91,7 @@ class Book extends React.Component {
         </div>
         <div className="book-body">
           <div className="author-box">
-            <Typography className={classes.text}>Author：</Typography>
+            <Typography className={classes.text}>Author: </Typography>
             <Typography className={classes.text}>{this.props.book.author}</Typography>
           </div>
         </div>

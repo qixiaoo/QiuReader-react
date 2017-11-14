@@ -13,6 +13,7 @@ const styles = theme => ({
     width: 280,
     padding: 0,
     listStyle: 'none',
+    overflowX: 'hidden',
   },
 });
 

@@ -21,6 +21,7 @@ class Toolbar extends React.Component {
 
     this.handleFullScreen = this.handleFullScreen.bind(this);
     this.handleExitFullScreen = this.handleExitFullScreen.bind(this);
+    this.handleScreen = this.handleScreen.bind(this);
     this.handleSettings = this.handleSettings.bind(this);
     this.handleNotes = this.handleNotes.bind(this);
     this.handleBookmarks = this.handleBookmarks.bind(this);
@@ -60,6 +61,11 @@ class Toolbar extends React.Component {
     }
 
     this.setState({isFullScreen: false});
+  }
+
+  // 点击切换全屏按钮触发
+  handleScreen() {
+    !this.state.isFullScreen ? this.handleFullScreen() : this.handleExitFullScreen();
   }
 
   // 点击设置按钮的处理程序
@@ -129,12 +135,12 @@ class Toolbar extends React.Component {
           <button className="toolbar-btn drag-me">
             <DragHandleIcon/>
           </button>
-          <button className="toolbar-btn">
+          <button className="toolbar-btn" onClick={this.handleScreen}>
             <span style={fullScreen}>
-              <FullScreenIcon onClick={this.handleFullScreen}/>
+              <FullScreenIcon/>
             </span>
             <span style={exitFullScreen}>
-              <FullScreenExitIcon onClick={this.handleExitFullScreen}/>
+              <FullScreenExitIcon/>
             </span>
           </button>
           <button className="toolbar-btn" title="settings" onClick={this.handleSettings}>

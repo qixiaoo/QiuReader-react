@@ -33,19 +33,19 @@ body.show::after {
   opacity: .5;
 }
 
-.book:nth-child(1) .book-head {
+.book:nth-child(4n+1) .book-head {
   background: url("assets/images/1.jpg");
 }
 
-.book:nth-child(2) .book-head {
+.book:nth-child(4n+2) .book-head {
   background: url("assets/images/2.jpg");
 }
 
-.book:nth-child(3) .book-head {
+.book:nth-child(4n+3) .book-head {
   background: url("assets/images/3.jpg");
 }
 
-.book:nth-child(4) .book-head {
+.book:nth-child(4n+4) .book-head {
   background: url("assets/images/4.jpg");
 }
 

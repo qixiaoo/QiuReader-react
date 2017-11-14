@@ -387,25 +387,25 @@ class SettingsDialog extends React.Component {
               <div onBlur={this.changeFontConfig} onChange={this.handleOtherChange}>
                 <div className={classes.controlBox}>
                   <span className={classes.caption}>font size</span>
-                  <div>
+                  <div title="Valid range: 10-100">
                     <input className={classes.input} name="fontSize" value={fontSize === 0 ? 'default' : fontSize}/>
                   </div>
                 </div>
                 <div className={classes.controlBox}>
                   <span className={classes.caption}>line height</span>
-                  <div>
+                  <div title="Valid range: 1-100">
                     <input className={classes.input} name="lineHeight" value={lineHeight === 0 ? 'default' : lineHeight}/>
                   </div>
                 </div>
                 <div className={classes.controlBox}>
                   <span className={classes.caption}>letter spacing</span>
-                  <div>
+                  <div title="Valid range: 0-100">
                     <input className={classes.input} name="letterSpacing" value={letterSpacing === 0 ? 'default' : letterSpacing}/>
                   </div>
                 </div>
                 <div className={classes.controlBox}>
                   <span className={classes.caption}>word spacing</span>
-                  <div>
+                  <div title="Valid range: 0-100">
                     <input className={classes.input} name="wordSpacing" value={wordSpacing === 0 ? 'default' : wordSpacing}/>
                   </div>
                 </div>

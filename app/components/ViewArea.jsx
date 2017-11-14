@@ -89,6 +89,10 @@ class ViewArea extends React.Component {
     this.setKey = this.setKey.bind(this);
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('copy', this.copyTextHack);
+  }
+
   componentDidMount() {
     let page = document.getElementById('page-area');
     let {book, epub} = this.props;
@@ -96,6 +100,15 @@ class ViewArea extends React.Component {
     epub.renderTo(page); // 渲染
     this.bindEvent(); // 绑定事件
     epub.gotoCfi(AutoBookmark.getCfi(book.key)); // 跳转到上一次阅读位置
+
+    // 解决火狐下不能正常复制
+    this.copyTextHack = (event) => {
+      let iDoc = document.getElementsByTagName('iframe')[0].contentDocument;
+      let copyText = iDoc.getSelection().toString() || document.getSelection().toString();
+      event.clipboardData.setData('text/plain', copyText);
+      event.preventDefault();
+    };
+    document.addEventListener('copy', this.copyTextHack);
   }
 
   // 为阅读界面绑定事件

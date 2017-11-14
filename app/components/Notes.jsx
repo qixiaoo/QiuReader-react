@@ -20,6 +20,7 @@ const styles = theme => ({
     padding: 0,
     listStyle: 'none',
     flexGrow: 2,
+    overflowX: 'hidden',
   },
   foot: {
     display: 'flex',
