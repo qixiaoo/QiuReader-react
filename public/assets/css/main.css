@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+body::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background: url("../image/QiuPlus.png") no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+  opacity: 0;
+  transition: opacity 1.5s;
+  z-index: -1;
+}
+
+body.show::after {
+  opacity: .5;
+}
+
+.book:nth-child(4n+1) .book-head {
+  background: url("../image/1.jpg");
+}
+
+.book:nth-child(4n+2) .book-head {
+  background: url("../image/2.jpg");
+}
+
+.book:nth-child(4n+3) .book-head {
+  background: url("../image/3.jpg");
+}
+
+.book:nth-child(4n+4) .book-head {
+  background: url("../image/4.jpg");
+}
+
+::-webkit-scrollbar { /* 滚动条 */
+  width: 6px;
+}
+
+::-webkit-scrollbar-button { /* 滚动条两端的按钮 */
+  display: none;
+}
+
+::-webkit-scrollbar-thumb { /* 滚动块 */
+  background-color: #726E6B;
+  border-radius: 6px;
+}
